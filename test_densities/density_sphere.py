@@ -1,4 +1,5 @@
 import torch
+import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
 import cartopy.crs as ccrs
@@ -119,7 +120,7 @@ def plot_distr(distr=None, res_npts=500, save_fig=True, model=None, device=None,
     if distr == '1wrapped':
         probs = true_1wrapped_probs(lonlat)
     elif distr == '4wrapped':
-        probs = true_4wrapped_probs(lonlat)
+        probs = true_4wrapped_probs(lonlat, res_npts)
     elif distr == 'bigcheckerboard':
         probs = true_bigcheckerboard_probs(lonlat)
     elif distr == 'model':
@@ -145,7 +146,7 @@ def true_1wrapped_probs(lonlat):
     return probs
 
 
-def true_4wrapped_probs(lonlat):
+def true_4wrapped_probs(lonlat, npts):
     xyz, _ = spherical_to_xyz(lonlat)
 
     one = torch.ones(3)
