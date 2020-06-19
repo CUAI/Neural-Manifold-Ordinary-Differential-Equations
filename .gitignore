@@ -1,0 +1,12 @@
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+.vscode/
+.DS_Store
+*/.DS_Store
+__pycache__/
+*/__pycache__/
+build/
+*/build/
+dist/
+*.egg
+contsave/
