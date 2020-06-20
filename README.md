@@ -14,7 +14,7 @@ Hyperboloid             |  Sphere
 :-------------------------:|:-------------------------:
 ![H^2](https://i.imgur.com/xcbMjnK.png)| ![S^2](https://i.imgur.com/JyQYdiL.png)
 
-Below we have visualized how our Neural Manifold ODEs learn the `5gaussians` and `bigcheckerboard` densities on the hyperboloid (second and third rows in the hyperboloid figure above).
+Below we have visualized how our Neural Manifold ODEs learn the `5gaussians` and `bigcheckerboard` densities on the hyperboloid (second and third rows in the hyperboloid figure above), as well as the `4wrapped` and `bigcheckerboard` densities on the sphere (second and third rows in the sphere figure above).
 
 Hyperboloid Gaussians             |  Hyperboloid Checkerboard  | Sphere Wrapped Normals | Sphere Checkerboard
 :-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
