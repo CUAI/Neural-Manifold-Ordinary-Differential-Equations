@@ -142,12 +142,14 @@ class SCNF(nn.Module):
         tangval = self.man.log(loc, z)
 
         logpz_t = 0
+        
+        scale = -1 if reverse else 1
 
         for time in integration_times:
             chartproj = SphereProj(self.func, loc)
             chartfunc = ODEfunc(chartproj)
 
-            logpz_t -= self.man.logdetexp(loc, tangval)
+            logpz_t -= scale * self.man.logdetexp(loc, tangval)
 
             # integrate as a tangent space operation
             state_t = odeint(
@@ -168,7 +170,7 @@ class SCNF(nn.Module):
 
             # log p updates
             logpz_t -= logpy_t.squeeze()
-            logpz_t += self.man.logdetexp(loc, y_t)
+            logpz_t += scale * self.man.logdetexp(loc, y_t)
 
             # set up next iteration values
             z_n = self.man.exp(loc, y_t)
