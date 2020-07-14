@@ -23,7 +23,7 @@ Hyperboloid Gaussians             |  Hyperboloid Checkerboard  | Sphere Wrapped 
 <!---hyperboloid gaussians https://media3.giphy.com/media/MF7pSvnQPKmQILKL2V/giphy.gif; hyperboloid checkerboard https://media3.giphy.com/media/cLZ7ImIllgNBvIEftp/giphy.gif --->
 
 ## Software Requirements
-This codebase requires Python 3, PyTorch 1.0+, torchdiffeq ([repo here](https://github.com/rtqichen/torchdiffeq), installed via `pip install torchdiffeq`), and Cartopy 0.18 (most easily installed via conda ```conda install -c conda-forge cartopy```).
+This codebase requires Python 3, PyTorch 1.5+, torchdiffeq ([repo here](https://github.com/rtqichen/torchdiffeq), installed via `pip install torchdiffeq`), and Cartopy 0.18 (most easily installed via conda ```conda install -c conda-forge cartopy```).
 
 ## Usage
 
